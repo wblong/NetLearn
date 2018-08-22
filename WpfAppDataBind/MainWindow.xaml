@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfAppDataBind.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDataBind"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="6">
+            <TextBlock Text="From:"/>
+            <TextBox Margin="10,2,2,2" Width="120" MaxLength="10" x:Name="_from"/>
+            <TextBlock Text="To:" Margin="20,0,0,0"/>
+            <TextBox Margin="10,2,2,2" Width="120" MaxLength="10" x:Name="_to"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="6">
+            <Button Content="Calculate" Padding="4" Click="CalcBtnClick" x:Name="_calcButton"></Button>
+            <Button Content="Cancel" Padding="4" Margin="10,0,0,0" IsEnabled="False" x:Name="_cancelButton"
+                    Click="_cancelButton_Click"/>
+        </StackPanel>
+        <TextBlock x:Name="_result" Grid.Row="3" FontSize="20" Margin="6" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
