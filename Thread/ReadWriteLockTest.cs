@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Thread
+namespace ThreadTest
 {
-    class ReadWriteLockTest
+    public class ReadWriteLockTest
     {
+
     }
 }
