@@ -16,7 +16,8 @@ namespace ThreadTest
 
             //SharePrinter.TestThread();
             // PaySemaphore.TestPay();
-            SpinLockTest.Test();
+            //SpinLockTest.Test();
+            TestSpinWait.Test();
             Console.Read();
 
         }
